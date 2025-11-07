@@ -1,76 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Your Name here</title>
 
     <!-- ! Apply fonts imported from Google Fonts -->
     <!-- Insert code here -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- ! Internat styes -->
     <style>
         /* insert styles here */
-    </style>
-  </head>
+        /* multi-line comment: CSS variables for easy theme management */
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #6c757d;
+            --accent-color: #4caf50;
+            /* inline comment: A touch of green for accents */
+            --light-bg-color: #f8f9fa;
+            --white: #ffffff;
+            /* or #fff */
+            --border-radius: 0.5rem;
+            /* default browser font size: 16px; Converted from 8px */
+            --transition-speed: 0.3s;
+            /* Optional: Set base font size for easier rem calculations (e.g., 62.5% = 10px) */
+            font-size: 100%;
+            /* Default 16px. 1rem = 16px */
+        }
 
-  <body>
+        /* Base Styling & Font Application */
+        /* reset all elements on the web page */
+        * {
+            /* the star is for indicating to target all elements */
+            box-sizing: border-box;
+            margin: 10;
+            padding: 0;
+        }
+
+        body {
+            /* affect all elements in the body e.g. all text except hyperlinks*/
+            font-family: "Lato", sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        /* Reusable Components */
+        .section-padding {
+            padding: 5rem 1.25rem;
+            /* Converted from 80px 20px */
+            max-width: 75rem;
+            /* Converted from 1200px */
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            /* Converted from 2.5em */
+            text-align: center;
+            margin-bottom: 3.75rem;
+            /* Converted from 60px */
+            color: var(--primary-color);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.9375rem 1.25rem;
+            background-color: var(--white);
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 0.9375rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: color var(--transition-speed);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- 1. LANDING SECTION --- */
+        /* # is an ID selector */
+        #landing {
+            min-height: 80dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: var(--light-bg-color);
+            border-radius: 0 0 2rem 2rem;
+            /* tl = 0, tr = 0, br = 32px, bl = 32px */
+        }
+
+        .landing-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            /* Converted from 20px */
+            padding: 1.25rem;
+            /* Converted from 40px */
+        }
+
+        .profile-pic-large {
+            width: 9.375rem;
+            /* Converted from 150px */
+            height: 9.375rem;
+            /* Converted from 150px */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 0.25rem solid var(--primary-color);
+            /* Converted from 4px */
+            margin-bottom: 0.625rem;
+            /* Converted from 10px */
+        }
+
+        .landing-content h1 {
+            font-size: 3.75rem;
+            font-weight: 700;
+        }
+
+        .landing-content p {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.25rem;
+        }
+
+        .cta-group a {
+            display:inline-block;
+            padding: 0.625rem 1.5625rem;
+            margin: 0 0.625rem;
+            text-decoration:none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: all var(--transition-speed);
+            border: 0.125rem solid var (--primary-color);    
+        }
+            
+        .primary-cta {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .primary-cta:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            box-shadow: 0 0.25rem 0.5rem rgb(0, 0, 0, 0.2);
+        }
+
+        .secondary-cta {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .secondary-cta:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+    </style>
+</head>
+
+<body>
     <!-- ! Start of nav (Main Navigation) -->
     <nav>
-        <a href="#landing">landing</a>
-        <a href="#about">about</a>
-        <a href="#experience">experience</a>
-        <a href="#project">projects</a>
-        <a href="#about">contacts</a>
+        <a href="#landing">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contacts</a>
     </nav>
     <!-- ! End of nav (Main Navigation) -->
 
     <!-- ! Start of Landing section -->
-   <section>
-        <div>
-                <!-- Create a placeholder for profile image -->
-                <img 
-                    src="https://placehold.co/200x200/000000/FFFFFF?text=Dan" 
-                    alt="Profile Picture Placeholder"
-                >
-                <!-- Name and designation -->
-                 <p>
-                    Hello, I&apos;m
-                 </p>
-                 <h1>
-                    Dani
-                 </h1>
-                 <p>
-                    Jr Fullstack Developer | Mid-career professional
-                 </p>  
-                 <div>
-                    <a href="#contact">Contact Me</a>
-                    <a href="#">Download CV</a>
-
-                 </div>               
-
+    <section id="landing" class="section-padding">
+        <div class="landing-content">
+            <!-- Create a placeholder for profile image -->
+            <img src="https://placehold.co/200x200/000000/FFFFFF?text=Dan" alt="Profile Picture Placeholder"
+                class="profile-pic-large">
+            <!-- Name and designation -->
+            <p>Hello, I&apos;m</p>
+            <h1>Dani Lie Fon Khim</h1>
+            <p>Jr Fullstack Developer | Mid-career professional</p>
+            <div class="cta-group">
+                <a class="primary-cta" href="#contact">Contact Me</a>
+                <a class="secondary-cta" href="#">Download CV</a>
+            </div>
         </div>
-   </section>
+    </section>
     <!-- ! End of Landing section -->
 
     <!-- ! Start of About Me section -->
-        <!-- Insert HTML syntax here -->
+    <section class="section-padding">
+        <!-- Top Section -->
+        <h2>About Me</h2>
+
+        <!-- Bottom section -->
+        <div>
+            <div>
+                <!-- my photo -->
+                <img src="https://placehold.co/600x600/CCCCCC/6c757d?text=My+Portrait"
+                    alt="Placeholder image for portrait">
+            </div>
+            <div>
+                <!-- Title -->
+                <h3>My Passion? Explore more</h3>
+                <!-- Overview -->
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur suscipit voluptate at,
+                    velit incidunt ut ab in, id eveniet aliquid omnis eius. Doloremque deleniti ratione eius sed, magnam
+                    qui facere? Natus, voluptas, praesentium repudiandae dolores voluptatibus, quae reprehenderit
+                    deserunt ex dignissimos tempore quod! Voluptatibus facilis eius perferendis amet ratione.
+                </p>
+            </div>
+            <div>
+                <!-- Container card x2 -->
+                <div>
+                    <h4>
+                        <!-- Years of experience -->
+                        too many yrs, hahaha
+                    </h4>
+                    <p>Automation, Process safety application</p>
+                </div>
+                <div>
+                    <!-- Academic qualification -->
+                    Electrical/Electronics Engineering
+                </div>
+            </div>
+            <p>I'm in a vast vast universe</p>
+        </div>
+
+    </section>
     <!-- ! End of About Me section -->
 
     <!-- ! Start of Experience section -->
-        <!-- Insert HTML syntax here -->
+    <!-- Insert HTML syntax here -->
     <!-- ! End of Experience section -->
 
     <!-- ! Start of Projects section -->
-        <!-- Insert HTML syntax here -->
+    <!-- Insert HTML syntax here -->
     <!-- ! End of Projects section -->
 
     <!-- ! Start of Contact section -->
-        <!-- Insert HTML syntax here -->
+    <!-- Insert HTML syntax here -->
     <!-- ! End of Contact section -->
 
     <!-- ! Start of Footer -->
-        <!-- Insert HTML syntax here -->
+    <!-- Insert HTML syntax here -->
     <!-- ! End of Footer -->
-  </body>
+</body>
+
 </html>
