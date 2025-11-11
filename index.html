@@ -35,7 +35,7 @@
         * {
             /* the star is for indicating to target all elements */
             box-sizing: border-box;
-            margin: 10;
+            margin: 0;
             padding: 0;
         }
 
@@ -138,17 +138,18 @@
             margin-bottom: 1.25rem;
         }
 
+
         .cta-group a {
-            display:inline-block;
+            display: inline-block;
             padding: 0.625rem 1.5625rem;
             margin: 0 0.625rem;
-            text-decoration:none;
+            text-decoration: none;
             border-radius: var(--border-radius);
             font-weight: 600;
             transition: all var(--transition-speed);
-            border: 0.125rem solid var (--primary-color);    
+            border: 0.125rem solid var (--primary-color);
         }
-            
+
         .primary-cta {
             background-color: var(--primary-color);
             color: var(--white);
@@ -168,6 +169,349 @@
         .secondary-cta:hover {
             background-color: var(--primary-color);
             color: var(--white);
+        }
+
+        #about {
+            background-color: var(--white);
+        }
+
+        .about-grid {
+            display: flex;
+            gap: 2.5rem;
+            /* ~~ 40px */
+            align-items: flex-start;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 18.75rem;
+            /* ~~ 300px */
+            border-radius: var(--border-radius);
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            /* ~~ 1.8em */
+            font-weight: lighter;
+            font-style: italic;
+            margin-bottom: 0.9375rem;
+            /* ~~ 15px */
+        }
+
+        .info-card-container {
+            display: flex;
+            gap: 1.25rem;
+            /* ~~ 20px */
+            margin: 1.5625rem 0;
+            /* ~~ 25px 0 */
+        }
+
+        .info-card {
+            flex: 1;
+            padding: 1.25rem;
+            /* ~~ 20px */
+            border: 0.0625rem solid #ddd;
+            /* ~~ 1px */
+            border-radius: var(--border-radius);
+            text-align: center;
+            background-color: var(--light-bg-color);
+            box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.05);
+            /* ~~ 0 2px 5px */
+        }
+
+        .info-card h4 {
+            font-size: 1.2rem;
+            /* ~~ 1.2em */
+            color: var(--accent-color);
+            margin-bottom: 0.3125rem;
+            /* ~~ 5px */
+        }
+
+        /* --- 3. EXPERIENCE SECTION --- */
+        #experience {
+            background-color: var(--light-bg-color);
+        }
+
+        .experience-container {
+            display: flex;
+            gap: 2.5rem;
+            /* ~~ 40px */
+            justify-content: center;
+        }
+
+        .experience-card {
+            flex: 1;
+            min-width: 18.75rem;
+            /* ~~ 300px */
+            padding: 1.875rem;
+            /* ~~ 30px */
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
+            /* ~~ 0 4px 10px */
+            text-align: center;
+        }
+
+        .experience-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5625rem;
+            /* ~~ 25px */
+            border-bottom: 0.125rem solid var(--accent-color);
+            /* ~~ 2px */
+            padding-bottom: 0.625rem;
+            /* ~~ 10px */
+            display: inline-block;
+        }
+
+        /* */
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+            margin-top: 0.9375rem;
+            /* ~~ 15px */
+        }
+
+        .skill-list li {
+            width: calc(50% - 0.625rem);
+            /* ~~ 10px */
+            margin-bottom: 0.9375rem;
+            /* ~~ 15px */
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            /* ~~ 1.2em */
+            margin-right: 0.625rem;
+            /* ~~ 10px */
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.875rem;
+            /* ~~ 30px */
+            justify-content: center;
+        }
+
+        .project-card {
+            flex-basis: calc(33.333% - 1.25rem);
+            /* ~~ 20px */
+            min-width: 17.5rem;
+            /* ~~ 280px */
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
+            /* ~~ 0 4px 15px */
+            overflow: hidden;
+            transition: transform var(--transition-speed);
+        }
+
+        .project-card:hover {
+            transform: translateY(-0.3125rem); /* nudge project-card up by -5px */
+        }
+
+        .project-image {
+            width: 100%;
+            height: 12.5rem;
+            /* ~~ 200px */
+            background-color: var(--light-bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            /* ~~ 1.5em */
+            color: var(--secondary-color);
+        }
+
+        .project-details {
+            padding: 1.25rem;
+            /* ~~ 20px */
+        }
+
+        .project-details h3 {
+            font-size: 1.5rem;
+            /* ~~ 1.5em */
+            margin-bottom: 0.625rem;
+            /* ~~ 10px */
+            text-align: left;
+        }
+
+        .project-details p {
+            color: var(--secondary-color);
+            margin-bottom: 0.9375rem;
+            /* ~~ 15px */
+            font-size: 0.95rem;
+            /* ~~ 0.95em */
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin-right: 0.9375rem;
+            /* ~~ 15px */
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* TODO - Experience, project contact and footer */
+
+        #contact {
+            text-align: center;
+            background-color: var(--light-bg-color);
+        }
+
+        #contact p{
+            font-size: 1.2rem;
+            margin-bottom: 1.875rem; /*~~30px */
+            color: var(--secondary-color);
+        }
+
+        .contact-links a{
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5625rem;  /* ~~12px 25px */
+            margin: 0 0.9375rem; /* ~~15px */
+            border: 0.125rem solid var(--primary-color); /* ~~ 2px */
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: all var(--transition-speed);
+        }
+
+        .contact-links a:hover{
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .contact-links a span {
+            margin-right: 0.625rem; /* Converted from 10px */
+            font-size: 1.2rem;      /* Converted from 1.2em */
+        }
+
+
+        /* TODO add media query for contact-link */
+
+        footer {
+            text-align: center;
+            padding: 1.25rem; /* 20px */
+            border-top: 0.0625rem solid #eee; /* 1px */
+            background-color: var(--transition-speed);
+        }
+
+        .footer-nav a:hover{
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            margin-top: 0.625rem;  /* Converted from 10px */
+            font-size: 0.8rem;     /* Converted from 0.8em */
+            color: var(--secondary-color);
+        }
+
+
+        /* --- RESPONSIVE DESIGN (Media Queries) --- */
+
+        /* apply the styles here if the screen size <=900px ; = 56.25rem */
+        @media(max-width: 56.25rem) {
+
+            /* change h2 size */
+            h2 {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                flex-direction: column;
+            }
+
+            .about-image {
+                margin: 0 auto;
+                /*top/botom = 0; left/right=auto hence centered*/
+            }
+
+            .info-card-container {
+                flex-direction: column;
+            }
+
+            /*TODO - fix responsive layout for experiences-container */
+            .experience-container{
+                flex-direction: column;
+            }
+
+            /*TODO - fix responsive layout for skills-list li */
+            .skill-list li{
+                width: 100%; /* single column on small devices */
+            }
+
+            /*TODO - fix responsive layout for project-grid */
+            .projects-grid{
+                gap: 1.25rem /* 20px */
+            }
+            
+            /*TODO - fix responsive layout for project-card */
+            .project-card{
+                flex-basis: 100%; /* single column for project cards on mobile */
+
+            }
+
+        }
+
+        /* apply the styles if the screen is <=600px  (16px x 37.5rem */
+        @media(max-width: 37.5rem) {
+
+            /* customise section-heading */
+            .section-padding {
+                padding: 3.125rem 0.9375rem;
+            }
+
+            /* wrap our navigation bar */
+            nav {
+                flex-wrap: wrap;
+            }
+
+            /* set the about info into single column */
+            .about-grid {
+                flex-direction: column;
+            }
+
+            .about-image {
+                margin: 0 auto;
+            }
+
+            /* set the cta in single column */
+            .cta-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.625rem;
+            }
+
+            /* change the link inside the cta-group */
+            /* decendent selector */
+            .cta-group a {
+                margin: 0;
+                width: 100%;
+            }
+
+            .contact-links a {
+                margin: 0.3125rem;
+                /* Converted from 5px */
+            }
         }
     </style>
 </head>
@@ -200,64 +544,157 @@
         </div>
     </section>
     <!-- ! End of Landing section -->
+    <!-- Top Section -->
 
+    <!-- Bottom section -->
     <!-- ! Start of About Me section -->
-    <section class="section-padding">
-        <!-- Top Section -->
+    <section id="about" class="section-padding">
         <h2>About Me</h2>
-
-        <!-- Bottom section -->
-        <div>
-            <div>
-                <!-- my photo -->
+        <div class="about-grid">
+            <div class="about-image">
                 <img src="https://placehold.co/600x600/CCCCCC/6c757d?text=My+Portrait"
-                    alt="Placeholder image for portrait">
+                    alt="Placeholder image for portrait" />
             </div>
-            <div>
-                <!-- Title -->
-                <h3>My Passion? Explore more</h3>
-                <!-- Overview -->
+
+            <div class="about-text">
+                <h3>"My Passion? Learning new tech..."</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur suscipit voluptate at,
-                    velit incidunt ut ab in, id eveniet aliquid omnis eius. Doloremque deleniti ratione eius sed, magnam
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur suscipit voluptate
+                    at,
+                    velit incidunt ut ab in, id eveniet aliquid omnis eius. Doloremque deleniti ratione eius sed,
+                    magnam
                     qui facere? Natus, voluptas, praesentium repudiandae dolores voluptatibus, quae reprehenderit
                     deserunt ex dignissimos tempore quod! Voluptatibus facilis eius perferendis amet ratione.
                 </p>
-            </div>
-            <div>
-                <!-- Container card x2 -->
-                <div>
-                    <h4>
-                        <!-- Years of experience -->
-                        too many yrs, hahaha
-                    </h4>
-                    <p>Automation, Process safety application</p>
-                </div>
-                <div>
-                    <!-- Academic qualification -->
-                    Electrical/Electronics Engineering
-                </div>
-            </div>
-            <p>I'm in a vast vast universe</p>
-        </div>
 
+                <div class="info-card-container">
+                    <div class="info-card">
+                        <h4>0 Year</h4>
+                        <p>in Web Development</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Electrical/Electronics Engineering</h4>
+                        <p>Education</p>
+                    </div>
+                </div>
+
+                <p>I'm in rabbit holes of learning, where every hole has many branches and seems to lead to longer and
+                    deeper holes. But the fact is that they are all linked together.
+                    It is like solving 1,000 pcs puzzle, every piece helps to form the whole and complete
+                    picture.
+                </p>
+            </div>
+            </div>
     </section>
     <!-- ! End of About Me section -->
 
     <!-- ! Start of Experience section -->
-    <!-- Insert HTML syntax here -->
+    <section id="experience" class="section-padding">
+        <h2>Skills</h2>
+        <div class="experience-container">
+            <div class="experience-card">
+                <h3>Tech Stack</h3>
+                <ul class="skill-list">
+                    <li>HTML5 & Semantic Markup</li>
+                    <li>CSS3 (and Bootstrap)</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React</li>
+                    <li>Java</li>
+                    <li>Springboot (Maven)</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3>Tools & Concepts</h3>
+                <ul class="skill-list">
+                    <li>Version Control (Git, Github)</li>
+                    <li>Client-Server Artchitecture</li>
+                    <li>API Development (Postman)</li>
+                    <li>Unit Testing (Jest/jUnit)</li>
+                    <li>Visual Studio Code</li>
+                    <li>IntelliJ IDEA</li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <!-- ! End of Experience section -->
 
     <!-- ! Start of Projects section -->
-    <!-- Insert HTML syntax here -->
+    <section id="projects" class="section-padding">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">Project 1</div>
+                <div class="project-details">
+                    <h3>Capstone project</h3>
+                    <p>
+                        Developed a dynamic, product cart application with authentication
+                        and checkout features.
+                    </p>
+                    <div class="project-links">
+                        <a href="#">View Demo</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">Project 2</div>
+                <div class="project-details">
+                    <h3>Dummy project#1</h3>
+                    <p>
+                        Designed and styled a dashboard in React that captures user's
+                        playlist through Spotify APIs.
+                    </p>
+                    <div class="project-links">
+                        <a href="#">View Demo</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">Project 3</div>
+                <div class="project-details">
+                    <h3>Dummy project#2</h3>
+                    <p>
+                        Created an enrolment system to track students' course-enrolments
+                        and grade performance.
+                    </p>
+                    <div class="project-links">
+                        <a href="#">View Demo</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- ! End of Projects section -->
 
     <!-- ! Start of Contact section -->
-    <!-- Insert HTML syntax here -->
-    <!-- ! End of Contact section -->
+    <section id="contact" class="section-padding">
+        <h2>Contact Me</h2>
+        <p>Let's connect!</p>
+        <div class="contact-links">
+            <a href="mailto:myemail@gmail.com"> <span>📧</span> Email Me </a>
+            <a href="https://linkedin.com/in/johndoe">
+                <span>🔗</span> LinkedIn Profile
+            </a>
+        </div>
+    </section>
+
+        <!-- ! End of Contact section -->
 
     <!-- ! Start of Footer -->
-    <!-- Insert HTML syntax here -->
+     <footer>
+        <div  class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2025 Dani. All rights reserved</p>
+     </footer>
+
     <!-- ! End of Footer -->
 </body>
 
