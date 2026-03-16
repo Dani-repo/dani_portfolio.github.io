@@ -512,9 +512,9 @@ nav a:hover {
 }
 
 /* Ensure full, uncropped images in project4–6 popups */
-#project4 .project-carousel .carousel-image,
-#project5 .project-carousel .carousel-image,
-#project6 .project-carousel .carousel-image {
+#project1 .project-carousel .carousel-image,
+#project2 .project-carousel .carousel-image,
+#project3 .project-carousel .carousel-image {
     width: auto;
     max-width: 100%;
     height: auto;
@@ -523,7 +523,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-#project3 .project-popup-inner {
+#project6 .project-popup-inner {
     width: 80vw;
     height: auto;
     max-width: none;
@@ -532,7 +532,7 @@ nav a:hover {
     padding-right: 0.75rem;
 }
 
-#project3 .project-popup-inner img {
+#project6 .project-popup-inner img {
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -540,16 +540,16 @@ nav a:hover {
     margin-right: 0;
 }
 
-#project4 .project-popup-inner,
-#project5 .project-popup-inner,
-#project6 .project-popup-inner {
+#project1 .project-popup-inner,
+#project2 .project-popup-inner,
+#project3 .project-popup-inner {
     width: 80vw;
     height: 90vh;
     max-width: none;
     max-height: none;
 }
 
-#project4 .popup-live-demo {
+#project1 .popup-live-demo {
     position: absolute;
     top: 1.5rem;
     right: 25rem;
