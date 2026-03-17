@@ -511,7 +511,7 @@ nav a:hover {
     z-index: 6;
 }
 
-/* Ensure full, uncropped images in project4–6 popups */
+/* Ensure full, uncropped images in project1/2/3 popups */
 #project1 .project-carousel .carousel-image,
 #project2 .project-carousel .carousel-image,
 #project3 .project-carousel .carousel-image {
@@ -709,6 +709,14 @@ footer {
         font-size: 2rem;
     }
 
+    .landing-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing-content p {
+        font-size: 1rem;
+    }
+
     .about-grid {
         flex-direction: column;
     }
@@ -743,9 +751,23 @@ footer {
     .project-card {
         flex-basis: 100%;
         /* single column for project cards on mobile */
-
     }
 
+    /* Make popups use more width on tablets */
+    .project-popup-inner {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .project-carousel {
+        height: auto;
+    }
+
+    .project-carousel .carousel-image {
+        height: auto;
+        max-height: 75vh;
+        object-fit: contain;
+    }
 }
 
 /* apply the styles if the screen is <=600px  (16px x 37.5rem */
@@ -782,6 +804,29 @@ footer {
     .cta-group a {
         margin: 0;
         width: 100%;
+    }
+
+    .landing-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .landing-content p {
+        font-size: 0.95rem;
+    }
+
+    .project-popup-inner {
+        width: 95vw;
+        height: 90vh;
+        max-width: none;
+        max-height: 90vh;
+        padding: 0.75rem;
+    }
+
+    .project-carousel .carousel-image {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: contain;
     }
 
     .contact-links a {
